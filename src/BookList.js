@@ -5,10 +5,11 @@ function BookList() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("https://library-management-system-production-4ccd.up.railway.app/books")
-      .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, []);
+  fetch("https://library-management-system-production-4ccd.up.railway.app/books")
+    .then((res) => res.json())
+    .then((data) => setBooks(data))
+    .catch((err) => console.error(err));
+}, []);
 
   const filteredBooks = books.filter((b) =>
   b.title?.toLowerCase().includes(search.toLowerCase())
