@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function AddBook() {
+  console.log("AddBook component loaded"); 
   const [book, setBook] = useState({
     title: "",
     author: "",
