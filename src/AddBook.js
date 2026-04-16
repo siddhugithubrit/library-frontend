@@ -5,7 +5,7 @@ function AddBook() {
     title: "",
     author: "",
     category: "",
-    quantity: 0,
+    quantity: "",
   });
 
   const handleChange = (e) => {
@@ -13,23 +13,21 @@ function AddBook() {
   };
 
   const addBook = () => {
-    console.log("Button clicked"); // ✅ debug
+    console.log("Button clicked");
 
     fetch("https://library-management-system-production-4ccd.up.railway.app/books", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(book), // ✅ FIXED (use state directly)
+      body: JSON.stringify(book),
     })
       .then((res) => res.json())
       .then((data) => {
-        alert("Book added successfully");
         console.log(data);
+        alert("Book added successfully");
       })
-      .catch((err) => {
-        console.error("Error:", err);
-      });
+      .catch((err) => console.error(err));
   };
 
   return (
