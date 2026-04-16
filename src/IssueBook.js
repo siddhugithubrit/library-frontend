@@ -5,9 +5,9 @@ function IssueBook() {
   const [memberId, setMemberId] = useState("");
 
   const issueBook = () => {
-    fetch(`/issues/${bookId}/${memberId}`, {
-      method: "POST",
-    })
+    fetch(`https://library-management-system-production-4ccd.up.railway.app/issues/${bookId}/${memberId}`, {
+  method: "POST",
+})
       .then((res) => res.text())
       .then((data) => {
         alert(data);

@@ -4,9 +4,9 @@ function ReturnBook() {
   const [issueId, setIssueId] = useState("");
 
   const returnBook = () => {
-    fetch(`/issues/return/${issueId}`, {
-      method: "DELETE",
-    })
+    fetch(`https://library-management-system-production-4ccd.up.railway.app/return/${bookId}/${memberId}`, {
+  method: "POST",
+})
       .then((res) => res.text())
       .then((data) => {
         alert(data);

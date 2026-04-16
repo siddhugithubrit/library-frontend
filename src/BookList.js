@@ -5,7 +5,7 @@ function BookList() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("/books")
+    fetch("https://library-management-system-production-4ccd.up.railway.app/books")
       .then((res) => res.json())
       .then((data) => setBooks(data));
   }, []);

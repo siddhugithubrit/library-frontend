@@ -13,16 +13,22 @@ function AddBook() {
   };
 
   const addBook = () => {
-    fetch("/books", {
+    console.log("Button clicked"); // ✅ debug
+
+    fetch("https://library-management-system-production-4ccd.up.railway.app/books", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(book),
+      body: JSON.stringify(book), // ✅ FIXED (use state directly)
     })
       .then((res) => res.json())
       .then((data) => {
         alert("Book added successfully");
+        console.log(data);
+      })
+      .catch((err) => {
+        console.error("Error:", err);
       });
   };
 
