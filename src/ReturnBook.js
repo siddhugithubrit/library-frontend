@@ -1,16 +1,15 @@
 import { useState } from "react";
 
 function ReturnBook() {
-  const [issueId, setIssueId] = useState("");
+  const [bookId, setBookId] = useState("");
+  const [memberId, setMemberId] = useState("");
 
-  const returnBook = () => {
+  const handleReturn = () => {
     fetch(`https://library-management-system-production-4ccd.up.railway.app/return/${bookId}/${memberId}`, {
-  method: "POST",
-})
-      .then((res) => res.text())
-      .then((data) => {
-        alert(data);
-      });
+      method: "POST",
+    })
+      .then(() => alert("Book returned successfully"))
+      .catch((err) => console.error(err));
   };
 
   return (
@@ -18,12 +17,20 @@ function ReturnBook() {
       <h2>Return Book</h2>
 
       <input
-        placeholder="Issue ID"
-        onChange={(e) => setIssueId(e.target.value)}
+        placeholder="Book ID"
+        value={bookId}
+        onChange={(e) => setBookId(e.target.value)}
       />
       <br />
 
-      <button onClick={returnBook}>Return Book</button>
+      <input
+        placeholder="Member ID"
+        value={memberId}
+        onChange={(e) => setMemberId(e.target.value)}
+      />
+      <br />
+
+      <button onClick={handleReturn}>Return Book</button>
     </div>
   );
 }
