@@ -30,11 +30,9 @@ This application allows users to manage books, issue and return books, and autom
 
 ---
 
-## 🔗 Live Demo
-
+## 🚀 Live Demo
 - Frontend: https://verdant-kashata-03381c.netlify.app/
 - Backend API: https://library-management-system-production-4ccd.up.railway.app/books
-
 ---
 
 ## 📌 API Endpoints
