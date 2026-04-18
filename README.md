@@ -4,7 +4,7 @@ A full-stack Library Management System built using **Spring Boot** and **React.j
 This application allows users to manage books, issue and return books, and automatically track book quantity in real-time.
 
 🔹 Designed and developed REST APIs using Spring Boot  
-🔹 Integrated frontend with backend using Fetch API  
+🔹 - Integrated frontend with backend using Fetch API for real-time data handling  
 🔹 Deployed frontend on Netlify and backend on Railway
 
 ---
