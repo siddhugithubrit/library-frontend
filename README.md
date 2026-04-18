@@ -6,6 +6,7 @@ This application allows users to manage books, issue and return books, and autom
 🔹 Designed and developed REST APIs using Spring Boot  
 🔹 Integrated frontend with backend using Fetch API  
 🔹 Deployed frontend on Netlify and backend on Railway
+
 ---
 
 ## 🚀 Tech Stack
