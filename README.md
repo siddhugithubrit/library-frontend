@@ -1,8 +1,11 @@
-# 📚 Library Management System
+# 📚 Library Management System (Full Stack Project)
 
-A full-stack Library Management System built using Spring Boot and React.  
-This project allows users to manage books, issue books, and return books with quantity tracking.
+A full-stack Library Management System built using **Spring Boot** and **React.js**.  
+This application allows users to manage books, issue and return books, and automatically track book quantity in real-time.
 
+🔹 Designed and developed REST APIs using Spring Boot  
+🔹 Integrated frontend with backend using Fetch API  
+🔹 Deployed frontend on Netlify and backend on Railway
 ---
 
 ## 🚀 Tech Stack
